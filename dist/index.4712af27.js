@@ -220,8 +220,8 @@ padding: 0;
     id: undefined,
     time: 100,
     ui: {
-      demo: document.querySelector('#demo'),
-      demo2: document.querySelector('#demo2')
+      demo: document.querySelector("#demo"),
+      demo2: document.querySelector("#demo2")
     },
     n: 1,
     init: () => {
@@ -231,11 +231,11 @@ padding: 0;
       $16b5ad875ae907e2f7f79e7b8fe116cc$var$player.play();
     },
     events: {
-      '#btnPause': 'pause',
-      '#btnPlay': 'play',
-      '#btnSlow': 'slow',
-      '#btnNormal': 'normal',
-      '#btnFast': 'fast'
+      "#btnPause": "pause",
+      "#btnPlay": "play",
+      "#btnSlow": "slow",
+      "#btnNormal": "normal",
+      "#btnFast": "fast"
     },
     bindEvents: () => {
       for (let key in $16b5ad875ae907e2f7f79e7b8fe116cc$var$player.events) {
@@ -256,9 +256,11 @@ padding: 0;
       $16b5ad875ae907e2f7f79e7b8fe116cc$var$player.ui.demo.scrollTop = $16b5ad875ae907e2f7f79e7b8fe116cc$var$player.ui.demo.scrollHeight;
     },
     play: () => {
+      $16b5ad875ae907e2f7f79e7b8fe116cc$var$player.pause();
       $16b5ad875ae907e2f7f79e7b8fe116cc$var$player.id = setInterval($16b5ad875ae907e2f7f79e7b8fe116cc$var$player.run, $16b5ad875ae907e2f7f79e7b8fe116cc$var$player.time);
     },
     pause: () => {
+      console.log($16b5ad875ae907e2f7f79e7b8fe116cc$var$player.id);
       window.clearInterval($16b5ad875ae907e2f7f79e7b8fe116cc$var$player.id);
     },
     slow: () => {
@@ -280,4 +282,4 @@ padding: 0;
   $16b5ad875ae907e2f7f79e7b8fe116cc$var$player.init();
 })();
 
-//# sourceMappingURL=index.7788fd31.js.map
+//# sourceMappingURL=index.4712af27.js.map
